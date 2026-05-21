@@ -4,6 +4,10 @@
 .header {
     height: 80px;
     background-color: v.$neutral-0;
+
+    @include m.mobile {
+        height: auto;
+    }
 }
 
 .header .container {
@@ -13,6 +17,10 @@
     height: 100%;
     padding-top: v.$spacing-m;
     padding-bottom: v.$spacing-m;
+
+    @include m.mobile {
+        flex-wrap: wrap;
+    }
 }
 
 .header__left {
@@ -25,7 +33,7 @@
     font-family: v.$font-logo;
     font-weight: v.$font-weight-bold;
     font-size: 20px;
-    letter-spacing: 4.4%;
+    letter-spacing: 0.044em;
 }
 
 .header__nav {
@@ -48,7 +56,7 @@
     justify-content: center;
     align-items: center;
     min-width: 48px;
-    min-height: 48px;  
+    min-height: 48px;
     padding: v.$spacing-s;
     border-radius: v.$radius-sm; //沒有radius-xs用sm代替
     color: v.$neutral-900;
@@ -57,4 +65,35 @@
     .bi {
         font-size: 20px;
     }
+}
+
+.header__mobile-nav {
+    display: none;
+    
+
+    @include m.mobile {
+        display: flex;
+    }
+}
+
+.header__mobile__left-link {
+    flex: 1;
+    text-align: center;
+    padding: v.$spacing-s v.$spacing-l;
+    background-color: v.$primary-200;
+    text-decoration: none;
+    color: v.$neutral-900;
+    font-size: v.$label-md;
+    gap: v.$spacing-xs;
+}
+
+.header__mobile__right-link {
+    flex: 1;
+    text-align: center;
+    padding: v.$spacing-s v.$spacing-l;
+    background-color: v.$primary-100;
+    text-decoration: none;
+    color: v.$neutral-900;
+    font-size: v.$label-md;
+    gap: v.$spacing-xs;
 }
