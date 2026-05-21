@@ -1,0 +1,44 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.header {
+    height: 80px;
+    background-color: v.$neutral-0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding-top: v.$spacing-m;
+    padding-bottom: v.$spacing-m;
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.header__logo {
+    font-family: v.$font-logo;
+    font-weight: v.$font-weight-bold;
+    font-size: 20px;
+    letter-spacing: 4.4%;
+}
+
+.header__nav {
+    display: flex;
+    gap: 40px;
+
+    @include m.mobile {
+        display: none;
+    }
+}
+
+.header__nav-link {
+    text-decoration: none;
+    color: v.$neutral-900;
+    font-size: v.$label-md;
+}

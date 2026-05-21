@@ -2,7 +2,6 @@
 //type stretch寬度100%
 $container-max-width: 1296px; 
 $gutter-desktop:24px;
-//$margin-desktop:312px;
 $gutter-mobile:16px;
 $margin-mobile:12px;
 
@@ -51,6 +50,7 @@ $text-on-dark:$neutral-0;
 
 //Typography
 $font-family: 'Noto Sans TC', sans-serif;
+$font-logo: 'Mina', sans-serif;
 $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
@@ -98,8 +98,8 @@ $spacing-5xl:64px;
 $spacing-6xl:80px;
 
 //Radius
-$radius-sm:$radius-xs;
-$radius-md:$radius-sm;
+$radius-sm:4px;
+$radius-md:12px;
 $radius-rounded:1000px;
 
 //icon(use bootstrap5 .html link)
