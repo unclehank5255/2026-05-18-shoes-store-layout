@@ -29,71 +29,42 @@
     gap: 48px;
 }
 
-.header__logo {
-    font-family: v.$font-logo;
-    font-weight: v.$font-weight-bold;
-    font-size: 20px;
-    letter-spacing: 0.044em;
+.header__right {
+    display: flex;
+    align-items: center;
+    gap: v.$spacing-s;
 }
 
-.header__nav {
-    display: flex;
-    gap: 40px;
-
+.header .navigation__nav {
     @include m.mobile {
         display: none;
     }
 }
+.header__mobile-nav {
+  display: none;
 
-.header__nav-link {
+  @include m.mobile {
+    display: flex;
+  }
+}
+
+.header__mobile-link {
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: v.$neutral-900;
     font-size: v.$label-md;
+    //gap: v.$spacing-xs;
 }
 
-.header__icon-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 48px;
-    min-height: 48px;
-    padding: v.$spacing-s;
-    border-radius: v.$radius-sm; //沒有radius-xs用sm代替
-    color: v.$neutral-900;
-    cursor: pointer;
-
-    .bi {
-        font-size: 20px;
-    }
-}
-
-.header__mobile-nav {
-    display: none;
-    
-
-    @include m.mobile {
-        display: flex;
-    }
-}
-
-.header__mobile__left-link {
-    flex: 1;
-    text-align: center;
+.header__mobile-link--left {
     padding: v.$spacing-s v.$spacing-l;
     background-color: v.$primary-200;
-    text-decoration: none;
-    color: v.$neutral-900;
-    font-size: v.$label-md;
-    gap: v.$spacing-xs;
 }
 
-.header__mobile__right-link {
-    flex: 1;
-    text-align: center;
+.header__mobile-link--right {
     padding: v.$spacing-s v.$spacing-l;
     background-color: v.$primary-100;
-    text-decoration: none;
-    color: v.$neutral-900;
-    font-size: v.$label-md;
-    gap: v.$spacing-xs;
 }
