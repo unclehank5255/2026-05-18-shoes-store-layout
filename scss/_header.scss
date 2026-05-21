@@ -42,3 +42,16 @@
     color: v.$neutral-900;
     font-size: v.$label-md;
 }
+
+.header__actions .bi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 48px;
+    min-height: 48px;
+    font-size: 20px;
+    padding: v.$spacing-s;
+    border-radius: v.$radius-sm;//沒有radius-xs用sm代替
+    color: v.$neutral-900;
+    cursor: pointer;
+}
