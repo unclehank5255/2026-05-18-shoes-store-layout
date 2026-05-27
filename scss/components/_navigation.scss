@@ -1,5 +1,5 @@
-@use 'variables' as v;
-@use 'mixins' as m;
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
 
 
 .navigation__logo {
