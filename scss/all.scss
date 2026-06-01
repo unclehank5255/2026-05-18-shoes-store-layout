@@ -3,12 +3,12 @@
 
 @use "base/base";
 
-@use "layout/header";
-@use "layout/footer";
-
 @use "components/logo";
 @use "components/navigation";
 @use "components/button";
 @use "components/card";
 @use "components/link";
 @use "components/option";
+
+@use "layout/header";
+@use "layout/footer";
