@@ -1,70 +1,39 @@
 @use '../abstracts/variables' as v;
 @use '../abstracts/mixins' as m;
 
-.header {
-    height: 80px;
+header {
     background-color: v.$neutral-0;
-
-    @include m.mobile {
-        height: auto;
-    }
-}
-
-.header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
     padding-top: v.$spacing-m;
     padding-bottom: v.$spacing-m;
 
     @include m.mobile {
-        flex-wrap: wrap;
+        padding: 0;
     }
-}
 
-.header__left {
-    display: flex;
-    align-items: center;
-    gap: 48px;
-}
+    .navbar-desktop {
+        @include m.mobile {
+            padding: 12px;
+        }
+    }
 
-.header__right {
-    display: flex;
-    align-items: center;
-    gap: v.$spacing-s;
-}
+    .navbar-desktop .navbar__nav {
+        @include m.mobile {
+            display: none;
+        }
+    }
 
-.header .navigation__nav {
-    @include m.mobile {
+    .navbar-mobile .navbar__nav {
         display: none;
+
+        @include m.mobile {
+            width: 100%;
+            display: flex;
+            gap: 0;
+            padding-bottom: 0;
+
+            >li {
+                flex: 1;
+            }
+        }
     }
-}
-.header__mobile-nav {
-  display: none;
-
-  @include m.mobile {
-    display: flex;
-  }
-}
-
-.header__mobile-link {
-    flex: 1;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: v.$neutral-900;
-    font-size: v.$label-md;
-    //gap: v.$spacing-xs;
-}
-
-.header__mobile-link--left {
-    padding: v.$spacing-s v.$spacing-l;
-    background-color: v.$primary-200;
-}
-
-.header__mobile-link--right {
-    padding: v.$spacing-s v.$spacing-l;
-    background-color: v.$primary-100;
 }
