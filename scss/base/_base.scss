@@ -60,3 +60,12 @@ body {
     margin: 0 auto;
     padding: 0 v.$margin-mobile;
 }
+button {
+  border: none;           /* 去除預設邊框 */
+  background: none;       /* 去除預設背景 */
+  padding: 0;             /* 清除預設內距 */
+  margin: 0;              /* 清除預設外距 */
+  font: inherit;          /* 繼承全域字體設定 */
+  color: inherit;         /* 繼承文字顏色 */
+  cursor: pointer;        /* 滑鼠移入時顯示為可點擊的手型 */
+}
