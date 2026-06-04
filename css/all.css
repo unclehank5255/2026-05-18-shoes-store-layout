@@ -157,7 +157,7 @@ button {
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
-  letter-spacing: 5%;
+  letter-spacing: 0.05em;
 }
 .btn--lg {
   padding: 12px 24px;

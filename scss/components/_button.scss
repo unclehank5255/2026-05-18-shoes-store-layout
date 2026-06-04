@@ -9,7 +9,7 @@
     font-weight: v.$font-weight-medium;
     font-size: v.$label-md;
     line-height: v.$line-height-label;
-    letter-spacing: 5%;
+    letter-spacing: v.$letter-spacing;
 
     //size
     &--lg {
