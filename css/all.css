@@ -401,6 +401,67 @@ button {
   font-size: 16px;
 }
 
+.link-design {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  display: inline-flex;
+  gap: 4px;
+  font-size: 20px;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 0;
+}
+.link--primary {
+  color: #57A203;
+}
+.link--primary .link__text {
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  font-size: 16px;
+  border-bottom: 1px solid #57A203;
+}
+.link--primary:hover {
+  color: #477A11;
+}
+.link--primary:hover .link__text {
+  border-bottom: 1px solid #477A11;
+}
+.link--primary:focus {
+  color: #477A11;
+}
+.link--primary:focus .link__text {
+  border-bottom: 2px solid #477A11;
+}
+.link--primary:disabled {
+  opacity: 0.4;
+}
+.link--neutral {
+  color: #212529;
+}
+.link--neutral .link__text {
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  font-size: 16px;
+}
+.link--neutral:hover {
+  color: #6C757D;
+}
+.link--neutral:focus {
+  color: #212529;
+  border-bottom: 2px solid #212529;
+}
+.link--neutral:disabled {
+  opacity: 0.4;
+}
+
 header {
   background-color: #FFFFFF;
   padding-top: 16px;
