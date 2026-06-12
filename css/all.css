@@ -462,6 +462,69 @@ button {
   opacity: 0.4;
 }
 
+.option-design {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.option-nav {
+  display: flex;
+  gap: 5px;
+}
+
+.option {
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  font-size: 16px;
+  text-align: center;
+}
+.option__input {
+  position: absolute;
+  opacity: 0;
+}
+.option--text-only {
+  padding: 12px 24px;
+  border-radius: 4px;
+  border: 1px solid #DEE2E6;
+}
+.option--text-only:hover {
+  border: 1px solid #6C757D;
+}
+.option--text-only:has(.option__input:checked) {
+  border: 1px solid #212529;
+}
+.option--text-only:has(.option__input:disabled) {
+  opacity: 0.4;
+  pointer-events: none;
+}
+.option--text-img {
+  display: flex;
+  flex-direction: column;
+  color: #6C757D;
+  gap: 4px;
+}
+.option--text-img .option__img {
+  width: 64px;
+  border: 1px solid transparent;
+}
+.option--text-img:hover {
+  opacity: 0.8;
+}
+.option--text-img:has(.option__input:checked) {
+  color: #212529;
+}
+.option--text-img:has(.option__input:checked) .option__img {
+  border-color: #212529;
+}
+.option--text-img:has(.option__input:disabled) {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
 header {
   background-color: #FFFFFF;
   padding-top: 16px;

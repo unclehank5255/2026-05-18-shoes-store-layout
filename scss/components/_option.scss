@@ -1,0 +1,77 @@
+//NOTE：select由於目前還不會js所以用label and input去達成替代方案，沒辦法點空白處取消
+
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.option-design {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+}
+
+.option-nav {
+    display: flex;
+    gap: 5px;
+}
+
+//以上排版格式設定
+.option {
+    $self: &;
+    @include m.label(v.$label-md);
+    text-align: center;
+
+    &__input {
+        position: absolute;
+        opacity: 0;
+    }
+
+    &--text-only {
+        padding: v.$spacing-s v.$spacing-l;
+        border-radius: v.$radius-sm;
+        border: 1px solid v.$neutral-300;
+
+        &:hover {
+            border: 1px solid v.$neutral-600;
+        }
+
+        &:has(#{$self}__input:checked) {
+            border: 1px solid v.$neutral-900;
+        }
+
+        &:has(#{$self}__input:disabled) {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+    }
+
+    &--text-img {
+        display: flex;
+        flex-direction: column;
+        color: v.$neutral-600;
+        gap: v.$spacing-xxs;
+
+        #{$self}__img {
+            width: 64px;
+            border: 1px solid transparent; // 先佔位,選中只換色,沒設定會跑版
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &:has(#{$self}__input:checked) {
+            color: v.$neutral-900;
+
+            #{$self}__img {
+                border-color: v.$neutral-900;
+            }
+        }
+
+        &:has(#{$self}__input:disabled) {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+    }
+}
