@@ -561,6 +561,73 @@ header .navbar-mobile .navbar__nav {
   }
 }
 
+.hero {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 1920/800;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner.png");
+}
+@media (max-width: 768px) {
+  .hero {
+    aspect-ratio: 375/480;
+    max-height: 480px;
+    background-position: center 70%;
+    background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner-sm.png");
+  }
+}
+.hero__block {
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .hero__block {
+    gap: 8px;
+  }
+}
+.hero__block .btn {
+  margin-top: 32px;
+}
+@media (max-width: 768px) {
+  .hero__block .btn {
+    margin-top: 24px;
+  }
+}
+.hero__block h2 {
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.05em;
+  font-size: 64px;
+}
+@media (max-width: 768px) {
+  .hero__block h2 {
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    font-size: 48px;
+  }
+}
+.hero__block p {
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.05em;
+  font-size: 28px;
+}
+@media (max-width: 768px) {
+  .hero__block p {
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    font-size: 20px;
+  }
+}
+
 footer {
   background-color: #F8F9FA;
 }

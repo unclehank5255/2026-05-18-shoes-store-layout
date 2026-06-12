@@ -1,0 +1,56 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.hero {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    aspect-ratio: 1920 / 800;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner.png");
+
+    @include m.mobile {
+        aspect-ratio: 375 / 480;
+        max-height: 480px;
+        background-position: center 70%;
+        background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/banner-sm.png");
+    }
+
+    &__block {
+        color: v.$neutral-0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: v.$spacing-m; //16
+
+        @include m.mobile {
+            gap: v.$spacing-xs; //8
+        }
+
+        .btn {
+            margin-top: v.$spacing-xl; //32
+
+            @include m.mobile {
+                margin-top: v.$spacing-l; //24
+            }
+        }
+
+        h2 {
+            @include m.heading(v.$display-1);
+
+            @include m.mobile {
+                @include m.heading(v.$display-2);
+            }
+        }
+
+        p {
+            @include m.heading(v.$h3);
+
+            @include m.mobile {
+                @include m.heading(v.$h5);
+            }
+        }
+    }
+}
