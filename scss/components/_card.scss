@@ -1,0 +1,148 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.card-product {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &__img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: opacity 0.3s ease-in-out;
+
+        &:hover,
+        &:active {
+            opacity: 0.8;
+        }
+    }
+
+    &--lg {
+        max-width: 636px;
+    }
+
+    &--md {
+        max-width: 300px;
+    }
+
+    &--sm {
+        max-width: 150px;
+    }
+
+
+
+    .card-product__info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    h5 {
+        @include m.heading(v.$h5);
+    }
+
+    h6 {
+        @include m.heading(v.$h6);
+    }
+
+    p {
+        @include m.label(v.$label-md);
+    }
+}
+
+.card-image {
+    position: relative;
+
+    &__img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: opacity 0.3s ease-in-out;
+
+        &:hover,
+        &:active {
+            opacity: 0.8;
+        }
+    }
+
+    &__badge {
+        z-index: 1;
+        @include m.label(v.$label-md);
+        font-family: 'Montserrat', sans-serif;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: v.$spacing-xs v.$spacing-s;
+        color: v.$primary-400;
+        background-color: v.$primary-100;
+    }
+
+    &--lg {
+        max-width: 422px;
+    }
+
+    &--sm {
+        max-width: 300px;
+    }
+}
+
+.card-category {
+    position: relative;
+    color: v.$neutral-0;
+
+    &__img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: opacity 0.3s ease-in-out;
+
+        &:hover,
+        &:active {
+            opacity: 0.8;
+        }
+    }
+
+
+    &--lg {
+        max-width: 422px;
+    }
+
+    &--sm {
+        max-width: 164px;
+    }
+
+    &__overlay {
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        inset: 0;
+        transition: opacity 0.3s ease-in-out;
+        background-color: rgba(0, 0, 0, 0.4);
+        gap: v.$spacing-xs;
+
+        &:hover,
+        &:active {
+
+            h3,
+            h6 {
+                color: v.$primary-300;
+            }
+        }
+    }
+
+    h3 {
+        @include m.heading(v.$h3);
+    }
+
+    &--lg p {
+        @include m.heading(v.$h4);
+    }
+
+    h6,
+    &--sm p {
+        @include m.heading(v.$h6);
+    }
+}
