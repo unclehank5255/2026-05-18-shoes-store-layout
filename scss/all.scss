@@ -1,10 +1,14 @@
-@use 'variables';
-@use 'mixins';
-@use 'base';
-@use 'header';
-@use 'footer';
-@use 'buttons';
-@use 'links';
-@use 'cards';
-@use 'options';
-@use 'navigation'; 
+@use "abstracts/variables";
+@use "abstracts/mixins";
+
+@use "base/base";
+
+@use "components/logo";
+@use "components/navigation";
+@use "components/button";
+@use "components/card";
+@use "components/link";
+@use "components/option";
+
+@use "layout/header";
+@use "layout/footer";
