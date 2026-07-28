@@ -28,7 +28,7 @@
         font-weight: v.$font-weight-medium;
         font-size: v.$label-md;
         line-height: v.$line-height-label;
-        letter-spacing: 0.05em;
+        letter-spacing: v.$letter-spacing;
         color: v.$neutral-900;
         padding: v.$spacing-s 0;
         gap: v.$spacing-2xl;

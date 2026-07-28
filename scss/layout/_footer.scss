@@ -50,7 +50,7 @@ footer {
     p {
         text-align: center;
         color: v.$neutral-600;
-        letter-spacing: 0.05em;
+        letter-spacing: v.$letter-spacing;
         line-height: v.$line-height-label;
         font-size: v.$label-sm;
         font-weight: v.$font-weight-regular;
