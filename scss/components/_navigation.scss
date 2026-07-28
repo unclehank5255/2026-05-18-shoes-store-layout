@@ -1,0 +1,77 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+
+.navbar {
+    &-desktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    &-mobile {
+        text-align: center;
+        text-decoration: none;
+        color: v.$neutral-900;
+        font-size: v.$label-md;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        gap: v.$spacing-3xl;
+    }
+
+    &__nav {
+        display: flex;
+        font-weight: v.$font-weight-medium;
+        font-size: v.$label-md;
+        line-height: v.$line-height-label;
+        letter-spacing: v.$letter-spacing;
+        color: v.$neutral-900;
+        padding: v.$spacing-s 0;
+        gap: v.$spacing-2xl;
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        padding: v.$spacing-s 0;
+
+        &-product {
+            padding: v.$spacing-s v.$spacing-l;
+            background-color: v.$primary-200;
+        }
+
+        &-story {
+            padding: v.$spacing-s v.$spacing-l;
+            background-color: v.$primary-100;
+        }
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: v.$spacing-s;
+        border-radius: v.$radius-sm; 
+        color: v.$neutral-900;
+        text-decoration: none;
+        cursor: pointer;
+
+        .bi {
+            font-size: 24px;
+        }
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}

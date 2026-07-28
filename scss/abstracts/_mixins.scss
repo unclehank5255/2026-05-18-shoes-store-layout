@@ -1,0 +1,21 @@
+@use 'variables' as v;
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+// _mixins.scss
+@mixin heading($size) {           // 標題類(card 標題、其他標題共用)
+    font-weight: v.$font-weight-bold;
+    line-height: v.$line-height-heading;
+    letter-spacing: v.$letter-spacing;
+    font-size: $size;
+}
+
+@mixin label($size) {             // 標籤類(button 文字、badge 共用)
+    font-weight: v.$font-weight-medium;
+    line-height: v.$line-height-label;
+    letter-spacing: v.$letter-spacing;
+    font-size: $size;
+}

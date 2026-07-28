@@ -1,0 +1,39 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+header {
+    background-color: v.$neutral-0;
+    padding-top: v.$spacing-m;
+    padding-bottom: v.$spacing-m;
+
+    @include m.mobile {
+        padding: 0;
+    }
+
+    .navbar-desktop {
+        @include m.mobile {
+            padding: 12px;
+        }
+    }
+
+    .navbar-desktop .navbar__nav {
+        @include m.mobile {
+            display: none;
+        }
+    }
+
+    .navbar-mobile .navbar__nav {
+        display: none;
+
+        @include m.mobile {
+            width: 100%;
+            display: flex;
+            gap: 0;
+            padding-bottom: 0;
+
+            >li {
+                flex: 1;
+            }
+        }
+    }
+}

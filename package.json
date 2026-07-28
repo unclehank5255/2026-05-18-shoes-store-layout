@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
  "scripts": {
-  "watch": "sass --watch scss/all.scss css/all.css"
+  "watch": "sass --watch scss/all.scss css/all.css",
+  "sass": "sass --watch scss/all.scss:css/all.css"
 },
   "keywords": [],
   "author": "",
